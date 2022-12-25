@@ -2,15 +2,12 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
+    
+    @StateObject var store = SampleIosViewModel()
+    
 	let greet = Greeting().greet()
 
 	var body: some View {
-		Text(greet)
-	}
-}
-
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
+        Text(store.boredApiState?.data?.activity ?? "")
 	}
 }

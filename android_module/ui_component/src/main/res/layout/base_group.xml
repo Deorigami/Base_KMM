@@ -10,7 +10,7 @@
         android:clipToPadding="false"
         android:clipChildren="false"
         android:layout_height="wrap_content">
-        <com.eyedea.ui_component.base.ComponentHeader
+        <com.eyedea.ui_component.view.base.ComponentHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/componentHeader"

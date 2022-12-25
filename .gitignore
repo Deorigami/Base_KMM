@@ -22,3 +22,5 @@
 .cxx
 local.properties
 /buildSrc/build/*
+**/build
+/iosApp/*

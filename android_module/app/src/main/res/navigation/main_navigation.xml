@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dashboardLandingPage">
+
+    <fragment
+        android:id="@+id/dashboardLandingPage"
+        android:name="com.eyedea.feature_dashboard.landing.DashboardLandingPage"
+        android:label="DashboardLandingPage" />
+    <fragment
+        android:id="@+id/videoPage"
+        android:name="com.eyedea.app.VideoPage"
+        android:label="VideoPage" />
+    <fragment
+        android:id="@+id/bookingLandingPage"
+        android:name="com.eyedea.feature_booking.BookingLandingPage"
+        android:label="BookingLandingPage" />
+</navigation>

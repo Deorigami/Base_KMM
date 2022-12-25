@@ -1,12 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'maven-publish'
 
 android {
-    namespace 'com.eyedea.base_build'
     compileSdk 33
         defaultConfig {
             minSdk 21
@@ -45,11 +43,16 @@ android {
     }
     buildFeatures {
         viewBinding true
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.2"
     }
 
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         maven {
             def propsFile = rootProject.file('github.properties')
             def props = new Properties()
@@ -67,7 +70,6 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.eyedea:core:1.0.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     api("androidx.fragment:fragment-ktx:1.5.5")
     implementation("androidx.media3:media3-exoplayer:1.0.0-beta03")
@@ -82,10 +84,29 @@ dependencies {
     implementation("androidx.appcompat:appcompat-resources:1.5.1")
     implementation("com.google.android.material:material:1.7.0")
 
-    implementation("com.google.dagger:hilt-android:2.44.2")
-    kapt("com.google.dagger:hilt-compiler:2.44.2")
-
     implementation("androidx.navigation:navigation-common-ktx:2.5.3")
     implementation("androidx.navigation:navigation-runtime:2.5.3")
     implementation("androidx.navigation:navigation-fragment:2.5.3")
+
+    implementation("com.j256.simplemagic:simplemagic:1.17")
+    implementation("com.arthenica:ffmpeg-kit-full:4.5.1-1")
+
+    implementation("io.insert-koin:koin-android:3.2.0")
+
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+
+
+    // COMPOSE
+
+    implementation("androidx.compose.ui:ui:1.3.3")
+    implementation("androidx.compose.ui:ui-tooling:1.3.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
+    implementation("androidx.compose.foundation:foundation:1.3.1")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("com.google.accompanist:accompanist-pager:0.28.0") // Pager
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.28.0") // Pager Indicators
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("io.coil-kt:coil-compose:2.2.2")
+
 }

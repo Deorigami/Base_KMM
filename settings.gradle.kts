@@ -13,8 +13,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "OpenTrip"
-include(":android_module:androidApp")
+rootProject.name = "Base KMM Project"
+include(":android_module:app")
 include(":shared")
 include(":android_module:ui_component")
 include(":android_module:ui_gallery")
@@ -24,3 +24,5 @@ include(":android_module:ui_gallery")
  * */
 
 include(":android_module:features:feature_dashboard")
+include(":android_module:features:feature_config")
+include(":shared_module:shared_core")

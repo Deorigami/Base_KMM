@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedButton" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+    <style name="Solid" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="android:textAppearance">@style/Headline_400</item>
+        <item name="android:textColor">@color/primary_black_10</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:height">60dp</item>
+        <item name="shapeAppearance">@style/RoundedButton</item>
+        <item name="android:backgroundTint">@color/primary_success_600</item>
+        <item name="rippleColor">@color/primary_success_500</item>
+    </style>
+    <style name="Solid.Medium" parent="Widget.Material3.Button">
+        <item name="android:textAppearance">@style/Headline_300</item>
+        <item name="android:textColor">@color/primary_black_10</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="shapeAppearance">@style/RoundedButton</item>
+        <item name="android:backgroundTint">@color/primary_success_600</item>
+        <item name="rippleColor">@color/primary_success_500</item>
+    </style>
+    <style name="OutlinedBlack.Medium" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/Headline_300</item>
+        <item name="android:textColor">@color/primary_black_900</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="shapeAppearance">@style/RoundedButton</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/primary_black_200</item>
+        <item name="strokeColor">@color/primary_black_700</item>
+    </style>
+    <style name="OutlinedBlack.Small" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/Headline_300</item>
+        <item name="android:textColor">@color/primary_black_900</item>
+        <item name="shapeAppearance">@style/RoundedButton</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="rippleColor">@color/primary_black_300</item>
+        <item name="strokeColor">@color/primary_black_700</item>
+    </style>
+</resources>

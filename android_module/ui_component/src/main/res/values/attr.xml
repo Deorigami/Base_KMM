@@ -4,4 +4,9 @@
         <attr name="title"/>
         <attr name="withMargin" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="Header">
+        <attr name="title"/>
+        <attr name="hasRightIcon" format="boolean"/>
+        <attr name="rightIcon" format="reference"/>
+    </declare-styleable>
 </resources>

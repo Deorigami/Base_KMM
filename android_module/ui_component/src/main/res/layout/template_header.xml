@@ -18,19 +18,19 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:gravity="center"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:layout_marginHorizontal="16dp"
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
         android:text="Kuta Beach"
         android:textAppearance="@style/Headline_400"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightIcon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/leftIcon"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -41,8 +41,6 @@
         android:src="@drawable/ic_heart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
