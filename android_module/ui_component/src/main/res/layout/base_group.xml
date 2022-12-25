@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_height="wrap_content">
+        <com.eyedea.ui_component.base.ComponentHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/componentHeader"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="16dp"
+            app:layout_goneMarginTop="0dp"
+            android:layout_width="match_parent"
+            android:id="@+id/rv"
+            app:layout_constraintTop_toBottomOf="@id/componentHeader"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

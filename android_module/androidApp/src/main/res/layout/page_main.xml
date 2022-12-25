@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/playerContainer"
+        android:background="@android:color/black"
+        android:layout_height="wrap_content">
+        <androidx.media3.ui.PlayerView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/player"
+            app:animation_enabled="false"
+            app:controller_layout_id="@layout/custom_exo_player_controller"
+            app:use_controller="true"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/playerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/testReso"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectedReso"
+        app:layout_constraintTop_toBottomOf="@id/testReso"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

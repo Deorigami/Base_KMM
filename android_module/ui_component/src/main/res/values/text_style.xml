@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    ## HEADLINE ## -->
+
+    <style name="Headline_900" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_bold</item>
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">58sp</item>
+    </style>
+    <style name="Headline_800" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_bold</item>
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="lineHeight">46sp</item>
+    </style>
+    <style name="Headline_700" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_semibold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">34sp</item>
+    </style>
+    <style name="Headline_600" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_bold</item>
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">34sp</item>
+    </style>
+    <style name="Headline_500" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">30sp</item>
+    </style>
+    <style name="Headline_400" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_bold</item>
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">26sp</item>
+    </style>
+    <style name="Headline_300" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">26sp</item>
+    </style>
+    <style name="Headline_200" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_medium</item>
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+    <style name="Headline_100" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_medium</item>
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">25sp</item>
+    </style>
+    <style name="Headline_10" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_medium</item>
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+<!--    ## HEADING ## -->
+
+    <style name="Heading_300" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+    <style name="Heading_200" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+    <style name="Heading_100" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_semibold</item>
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+<!--    ## BODY TEXT ## -->
+
+    <style name="Bodytext_300" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_regular</item>
+        <item name="android:fontFamily">@font/urbanist_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">26sp</item>
+    </style>
+
+    <style name="Bodytext_200" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_regular</item>
+        <item name="android:fontFamily">@font/urbanist_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="Bodytext_100" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/urbanist_regular</item>
+        <item name="android:fontFamily">@font/urbanist_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+</resources>

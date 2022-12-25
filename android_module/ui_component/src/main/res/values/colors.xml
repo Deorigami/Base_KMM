@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_black_10">#FAFAFA</color>
+    <color name="primary_black_300">#BABABA</color>
+
+<!--    Green-->
+    <color name="primary_success_600">#17AF83</color>
+
+<!--    Neutral-->
+    <color name="primary_neutral_600">#767676</color>
+<!--    Brand Yellow-->
+    <color name="brand_yellow_500">#FCD240</color>
+<!--    Error-->
+    <color name="primary_error_500">#FD5B1F</color>
+</resources>
