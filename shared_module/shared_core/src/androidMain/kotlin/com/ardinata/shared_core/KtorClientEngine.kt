@@ -1,6 +1,7 @@
 package com.ardinata.shared_core
 
 import android.content.Context
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import io.ktor.client.*
 import io.ktor.client.engine.okhttp.*
 
@@ -11,7 +12,7 @@ actual class KtorClientEngine constructor(private val appContext: AppContext) {
         config.invoke(this)
         engine {
 //            requestTimeout = 0
-//            addInterceptor(ChuckerInterceptor.Builder(appContext.context).build())
+            addInterceptor(ChuckerInterceptor.Builder(appContext.context).build())
         }
     }
     actual companion object Factory {

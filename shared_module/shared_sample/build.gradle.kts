@@ -1,22 +1,34 @@
 plugins {
     kotlin("multiplatform")
+    kotlin("native.cocoapods")
     id("com.android.library")
     kotlin("plugin.serialization")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 kotlin {
-    android()
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
+    android {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
         }
     }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
 
+    cocoapods {
+        summary = "Some description for the Shared Module"
+        homepage = "Link to the Shared Module homepage"
+        version = "1.0"
+        ios.deploymentTarget = "14.1"
+        framework {
+            baseName = "shared_sample"
+        }
+    }
+    
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -32,25 +44,15 @@ kotlin {
                 // Koin
                 implementation("io.insert-koin:koin-core:3.3.0")
                 implementation("io.insert-koin:koin-test:3.2.0")
-
-                api(project(":shared_module:shared_sample"))
+                api(project(":shared_module:shared_core"))
             }
         }
         val commonTest by getting {
             dependencies {
-//                implementation(kotlin("test"))
+                implementation(kotlin("test"))
             }
         }
-
-        val androidMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-cio:2.2.1")
-                implementation("io.ktor:ktor-client-okhttp:2.2.1")
-                implementation("com.github.chuckerteam.chucker:library:3.5.2")
-                implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
-                implementation("io.insert-koin:koin-android:3.2.0")
-            }
-        }
+        val androidMain by getting
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -60,9 +62,6 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
-            dependencies {
-                implementation("io.ktor:ktor-client-darwin:2.2.1")
-            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting
@@ -77,10 +76,13 @@ kotlin {
 }
 
 android {
-    namespace = "com.eyedea.animax"
+    namespace = "com.eyedea.shared_sample"
     compileSdk = 33
     defaultConfig {
         minSdk = 21
         targetSdk = 33
     }
+}
+dependencies {
+    implementation(project(mapOf("path" to ":shared_module:shared_core")))
 }

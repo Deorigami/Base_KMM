@@ -11,6 +11,12 @@ import kotlinx.serialization.json.Json
 
 object KtorNetworkProvider {
     val client = KtorClientEngine.build().getClientEngine {
+        defaultRequest {
+            url("https://jsonplaceholder.typicode.com/")
+            headers {
+
+            }
+        }
         install(HttpTimeout){
             requestTimeoutMillis = HttpTimeout.INFINITE_TIMEOUT_MS
             socketTimeoutMillis = HttpTimeout.INFINITE_TIMEOUT_MS

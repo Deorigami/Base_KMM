@@ -1,5 +1,7 @@
 package com.ardinata.shared_core.base
 
+import com.ardinata.shared_core.extensions.tryDeserialize
+import io.ktor.client.statement.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -31,4 +33,21 @@ abstract class BaseUseCase <P, R> {
     }.getOrElse {
         BaseState.Error(it)
     }
+
+
+
+}
+
+suspend inline fun <reified DTO, ENTITY> HttpResponse.dtoToBaseRespondEntity(block : (DTO) -> ENTITY) : BaseRespondEntity<ENTITY> {
+    val dto = tryDeserialize<DTO>(this.bodyAsText()){
+        return BaseRespondEntity(error = Throwable(it))
+    } ?: return BaseRespondEntity(error = Throwable("SOMETHING WENT WRONG"))
+    return BaseRespondEntity(block.invoke(dto))
+}
+
+suspend inline fun <reified DTO, ENTITY> HttpResponse.toBaseRespondEntity(block : (DTO) -> ENTITY) : BaseRespondEntity<ENTITY> {
+    val dto = tryDeserialize<BaseRespondDto<DTO>>(this.bodyAsText()){
+        return BaseRespondEntity(error = Throwable(it))
+    } ?: return BaseRespondEntity(error = Throwable("SOMETHING WENT WRONG"))
+    return BaseRespondEntity(dto.data?.let { block.invoke(it) })
 }
