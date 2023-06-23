@@ -91,7 +91,7 @@ dependencies {
     implementation("com.j256.simplemagic:simplemagic:1.17")
     implementation("com.arthenica:ffmpeg-kit-full:4.5.1-1")
 
-    implementation("io.insert-koin:koin-android:3.2.0")
+    implementation("io.insert-koin:koin-android:3.3.0")
 
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 

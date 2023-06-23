@@ -10,7 +10,7 @@ import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 
 object KtorNetworkProvider {
-    val client = KtorClientEngine.build().getClientEngine {
+    val client get() = KtorClientEngine.build().getClientEngine {
         defaultRequest {
             url("https://jsonplaceholder.typicode.com/")
             headers {

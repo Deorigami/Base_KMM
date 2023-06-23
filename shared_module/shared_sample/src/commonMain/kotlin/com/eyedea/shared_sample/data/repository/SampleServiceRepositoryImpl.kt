@@ -11,7 +11,7 @@ import org.koin.core.component.KoinComponent
 
 
 class SampleServiceRepositoryImpl : SampleServiceRepository, KoinComponent {
-    private val client = KtorNetworkProvider.client
+    private val client get() = KtorNetworkProvider.client
 
     override suspend fun getTodoItem(id: Int): BaseRespondEntity<TodoItemEntity> {
         val respond = client.get("todos/$id").dtoToBaseRespondEntity<TodoItemDto,TodoItemEntity> { TodoItemEntity(
