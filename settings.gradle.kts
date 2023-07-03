@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Base KMM Project"
+rootProject.name = "Auto Clicker"
 include(":android_module:app")
 include(":shared")
 include(":android_module:ui_component")
